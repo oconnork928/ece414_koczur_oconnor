@@ -1,1 +1,0 @@
- $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    C:\Users\Oconnork\ece414_koczur_oconnor\ece414_koczur_oconnor\Lab02\Lab03_koczur_oconnor.X\debouncer.c
