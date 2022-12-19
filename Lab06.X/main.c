@@ -32,6 +32,7 @@ void main(){
     uint16_t duty = 0xffff;
     oc1_init_plib(duty);
     INTEnableSystemMultiVectoredInt();
+    PIDfsm_init();
     while(1){
         oc1_setduty_plib(duty);
         if (zTimerReadFlag()) {
@@ -40,6 +41,7 @@ void main(){
             //if (period != lastperiod) {
             //    lastperiod = period;
             //}
+            PIDfsm_tick();
             period = ic1_getperiod();
             printf("period: %6d  rpm: %6d\r\n", period, ic1_ticks2rpm(period));
         }
